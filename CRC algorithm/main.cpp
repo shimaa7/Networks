@@ -76,5 +76,13 @@ int main()
         cout<<"enter 0 to alter message or 1 to verify it\n";
         cin>>op;
     }
+    if(op=="0"){
+        cout<<"enter number of bit to be modified:\n";
+        int n =0;
+        cin>>n;
+        codeword = alter(codeword,n);
+        op="1";
+        cout<<"altered message: "<<codeword<<endl;
+    }
     return 0;
 }
