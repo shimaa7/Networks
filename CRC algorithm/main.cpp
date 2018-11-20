@@ -64,7 +64,6 @@ bool verifier(string codeword,string key){
 string alter(string data, int index){
     string dataModified = data;
     char str = data.at(index - 1); // input start from 1 but we start from 0
-        cout<<str<<  endl; 
     str = (str == '0')?'1':'0';
     for(int i = 0;i<dataModified.length();i++){
         if (i == index - 1){
@@ -79,13 +78,20 @@ int main()
     cout<<"Enter File name and Location (e.g. D:\\message_generator.txt):\n(if in same file as this exe enter file name without location)\n";
     string inpfile = "msg.txt";
     cin>>inpfile;
-     string key = "";
+    string key = "";
     string data = "";
     string codeword ="";
     ifstream inp(inpfile.c_str());
     if(inp.is_open()){
-        
+        getline(inp,data,'\n');
+        getline(inp,key,'\n');
+        codeword = encodeData(data,key);
+        cout<<"transmitted message: "<<codeword<<" can be found also in transmitted_message.txt\n";
     }else {cout<<"File in not open"<<endl;}
+    inp.close();
+    ofstream out("transmitted_message.txt");
+    out<<codeword;
+    out.close();
 
     
     // verifier and alter
