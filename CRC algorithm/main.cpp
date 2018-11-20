@@ -93,7 +93,7 @@ int main()
     out<<codeword;
     out.close();
 
-    
+
     // verifier and alter
     cout<<"Do you want to Alter sent message or verify it?\nenter 0 to alter message or 1 to verify it\n";
     string op ="";
@@ -111,12 +111,14 @@ int main()
         cout<<"altered message: "<<codeword<<endl;
     }
     if(op=="1"){
+            cout<<"Verifying...\n";
         if(verifier(codeword,key)){
-            cout<<"Message is correct\n";
+            cout<<"Message is correct.\n";
         }
         else{
-            cout<<"Message is not correct\n";
+            cout<<"Message is not correct.\n";
         }
     }
+    system("Pause");
     return 0;
 }

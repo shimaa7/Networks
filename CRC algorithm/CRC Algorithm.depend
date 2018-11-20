@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1542736231 source:c:\users\public\documents\networks\crc algorithm\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+
