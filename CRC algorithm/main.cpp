@@ -79,6 +79,14 @@ int main()
     cout<<"Enter File name and Location (e.g. D:\\message_generator.txt):\n(if in same file as this exe enter file name without location)\n";
     string inpfile = "msg.txt";
     cin>>inpfile;
+     string key = "";
+    string data = "";
+    string codeword ="";
+    ifstream inp(inpfile.c_str());
+    if(inp.is_open()){
+        
+    }else {cout<<"File in not open"<<endl;}
+
     
     // verifier and alter
     cout<<"Do you want to Alter sent message or verify it?\nenter 0 to alter message or 1 to verify it\n";
