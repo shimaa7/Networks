@@ -51,8 +51,9 @@ string encodeData(string data,string key)
     string codeword = data+rem;
     return codeword;
 }
-bool verifier(string reminder){
+bool verifier(string codeword,string key){
    bool correct = false;
+   string reminder = mod2div(key,codeword);
    int rem = stoi(reminder);
    if(rem == 0){
      return true;
