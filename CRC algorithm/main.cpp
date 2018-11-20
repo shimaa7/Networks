@@ -51,8 +51,13 @@ string encodeData(string data,string key)
     string codeword = data+rem;
     return codeword;
 }
-bool verifier(string codeword,string key){
-
+bool verifier(string reminder){
+   bool correct = false;
+   int rem = stoi(reminder);
+   if(rem == 0){
+     return true;
+   }
+   return false;
 }
 string alter(string data, int index){
     string dataModified = data;
