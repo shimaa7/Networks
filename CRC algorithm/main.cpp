@@ -52,13 +52,14 @@ string encodeData(string data,string key)
     return codeword;
 }
 bool verifier(string codeword,string key){
-   bool correct = false;
-   string reminder = mod2div(key,codeword);
-   int rem = stoi(reminder);
-   if(rem == 0){
-     return true;
-   }
-   return false;
+    string reminder = mod2div(key,codeword);
+    bool correct = false;
+    string::size_type sz;
+    int rem = stoi (reminder,&sz);
+    if(rem == 0){
+        return true;
+    }
+    return false;
 }
 string alter(string data, int index){
     string dataModified = data;
