@@ -84,5 +84,13 @@ int main()
         op="1";
         cout<<"altered message: "<<codeword<<endl;
     }
+    if(op=="1"){
+        if(verifier(codeword,key)){
+            cout<<"Message is correct\n";
+        }
+        else{
+            cout<<"Message is not correct\n";
+        }
+    }
     return 0;
 }
