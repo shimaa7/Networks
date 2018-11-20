@@ -55,7 +55,11 @@ bool verifier(string codeword,string key){
 
 }
 string alter(string data, int index){
-
+    string dataModified = data;
+    char str = data.at(index - 1); // input start from 1 but we start from 0
+    str = (str == '0')?'1':'0';
+    dataModified.replace(dataModified.begin() + index,1,string(str));
+    return dataModified;
 }
 
 int main()
