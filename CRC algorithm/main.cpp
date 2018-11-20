@@ -69,6 +69,8 @@ string alter(string data, int index){
 
 int main()
 {
-
+    cout<<"Do you want to Alter sent message or verify it?\nenter 0 to alter message or 1 to verify it\n";
+    string op ="";
+    cin>>op;
     return 0;
 }
