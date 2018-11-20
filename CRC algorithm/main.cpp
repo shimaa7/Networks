@@ -44,7 +44,12 @@ string mod2div(string key, string data)
 }
 string encodeData(string data,string key)
 {
-
+    int keyLen = key.length();
+    string appData = "";
+    appData = data + string(keyLen-1,'0');
+    string rem = mod2div(key,appData);
+    string codeword = data+rem;
+    return codeword;
 }
 bool verifier(string codeword,string key){
 
