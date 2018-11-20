@@ -5,7 +5,16 @@
 using namespace std;
 
 string xorFn(string a,string b){
-
+    string result="";
+    for(int i = 1;i<a.length();i++){
+        if(a[i] == b[i]){
+            result+="0";
+        }
+        else{
+            result+="1";
+        }
+    }
+    return result;
 }
 string mod2div(string key, string data)
 {
